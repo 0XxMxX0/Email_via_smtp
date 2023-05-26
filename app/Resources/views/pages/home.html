@@ -1,0 +1,27 @@
+
+<div class="border rounded p-2 bg-light">
+    <div class="alert alert-{{message-type}} alert-dismissible fade show" style="display: {{display}}" role="alert">
+        <strong>{{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <h6 class="p-2 ">Enviar nova mensagem</h6>
+    <form class="form p-2" method="post" action="" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="address" class="form-label">Para</label>
+            <input type="email" class="form-control" name="address" id="address" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+            <label for="messageTitle" class="form-label">Assunto</label>
+            <input type="text" class="form-control" name="messageTitle" id="messageTitle" placeholder="Titulo da Mensagem">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="file" class="form-label">Anexo</label>
+            <input class="form-control" type="file" multiple name="file[]" id="file">
+        </div>
+        <button type="submit" name='btn-send' id="btn-send" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
